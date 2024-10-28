@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
-    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="cart-container">
@@ -20,61 +20,7 @@
       </div>
     </div>
     <script>
-      //Function to load cart items
-      function initializeCart() {
-        localStorage.clear();
-        const initialCart = [
-          {
-            id: 1,
-            name: "laptop",
-            price: 50000,
-            quantity: 1,
-            image:
-              "https://plus.unsplash.com/premium_photo-1681666713677-8bd559bef6bb?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8bGFwdG9wfGVufDB8fDB8fHww",
-          },
-          {
-            id: 2,
-            name: "mobile",
-            price: 14000,
-            quantity: 2,
-            image:
-              "https://images.unsplash.com/photo-1529653762956-b0a27278529c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9iaWxlfGVufDB8fDB8fHww",
-          },
-          {
-            id: 3,
-            name: "headphone",
-            price: 1500,
-            quantity: 2,
-            image:
-              "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D",
-          },
-          {
-            id: 4,
-            name: "mobile",
-            price: 14000,
-            quantity: 2,
-            image:
-              "https://images.unsplash.com/photo-1529653762956-b0a27278529c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bW9iaWxlfGVufDB8fDB8fHww",
-          },
-          {
-            id: 5,
-            name: "headphone",
-            price: 1500,
-            quantity: 2,
-            image:
-              "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D",
-          },
-        ];
-
-        //check if cart is already in local storage
-        if (!localStorage.getItem("cart")) {
-          //if not store the initial cart item in local storage
-          localStorage.setItem("cart", JSON.stringify(initialCart));
-        }
-      }
-
       document.addEventListener("DOMContentLoaded", () => {
-        initializeCart();
         const cartItemsContainer = document.getElementById("cart-items");
         const cartTotalElement = document.getElementById("cart-total");
         const checkoutButton = document.getElementById("checkout-button");
